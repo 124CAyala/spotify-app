@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>Welcome to my Spotify App</h1>
+    
+<h1>Select What to Display</h1>
+    <form action="{{ url_for('display') }}" method="post">
+        <label>
+            <input type="radio" name="choice" value="top_songs" checked>
+            Top Songs
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="choice" value="recommendations">
+            Recommendations
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+{% endblock %}

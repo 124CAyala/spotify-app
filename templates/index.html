@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1>Welcome to my Spotify App</h1>
+    
+<p>To get started, please login with your Spotify account:</p>
+
+<!-- Link or Button to initiate Spotify login -->
+<a href="/login">Login with Spotify</a>
+
+<table>
+    <tr>
+        {% for header in headings %}
+        <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+    
+    {% for row in data %}
+    <tr>
+        {% for cell in row %}
+        <td>{{ cell }}</td>
+        {% endfor %}    
+    </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}
